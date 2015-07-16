@@ -37,6 +37,9 @@ class SOL_Post_Formats {
 
 		// Add class names without prefix to post_class()
 		add_action('post_class', array(__CLASS__,'modify_post_class'));
+
+		// Add class name to TinyMCE
+		add_action('tiny_mce_before_init', array(__CLASS__, 'modify_editor_class') , 10 , 2 );
 	}
 
 
@@ -169,6 +172,11 @@ echo "</label></li>";
 		);
 	}
 
+	/**
+	 * Modify the post classes in the front end.
+	 *
+	 * In order to display listicle styles in the theme, we append a class to posts with a post type.
+	 */
 	public static function modify_post_class( $classes ) {
 		global $post;
 
@@ -179,6 +187,29 @@ echo "</label></li>";
 			$classes[] = $term->slug;
 
 		return $classes;
+	}
+
+	/**
+	 * Modify the body classes on TinyMCE's iframe.
+	 *
+	 * In order to display listicle styles in the TinyMCE editor's iframe, we append a class to it's body element.
+	 */
+	public static function modify_editor_class( $mceInit, $editor_id ) {
+		global $post;
+
+		if ( !get_the_terms( $post->ID , static::$taxonomy ) )
+			return $mceInit;
+
+		$classes = array(
+			$mceInit['body_class']
+		);
+
+		foreach ( get_the_terms( $post->ID , static::$taxonomy ) as $term )
+			$classes[] = $term->slug;
+
+		$mceInit['body_class'] = implode( ' ' , $classes );
+
+		return $mceInit;
 	}
 }
 
