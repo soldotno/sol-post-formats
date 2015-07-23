@@ -1,5 +1,5 @@
 ## Description
-WordPress plugin to distinguish between different article types - for example to format some posts as listicles.
+WordPress plugin to distinguish between different article types - for example to format some posts as <a href="https://en.wikipedia.org/wiki/Listicle">listicles</a>.
 
 (Even though WordPress has a built-in post format taxonomy, it does not allow modifications to it.)
 

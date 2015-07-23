@@ -2,7 +2,7 @@
 /*
 Plugin Name: SOL Post Formats
 Plugin URI: http://github.com/soldotno/sol-post-formats
-Description: WordPress plugin to distinguish between different article types - for example to format some posts as listicles. WordPress has a built-in post format taxonomy, but does not allow modifications to it. Based on work by Stephen Harris (<a href="http://profiles.wordpress.org/stephenh1988/">WP profile</a>, <a href="https://github.com/stephenh1988">GitHub</a>).
+Description: WordPress plugin to distinguish between different article types - for example to format some posts as <a href="https://en.wikipedia.org/wiki/Listicle">listicles</a>. (Even though WordPress has a built-in post format taxonomy, it does not allow modifications to it.) Based on work by Stephen Harris (<a href="http://profiles.wordpress.org/stephenh1988/">WP profile</a>, <a href="https://github.com/stephenh1988">GitHub</a>).
 Author: misund
 Author URI: http://sol.no/
 Version: 0.1.0
