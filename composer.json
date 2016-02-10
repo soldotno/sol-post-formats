@@ -1,5 +1,5 @@
 {
-    "version": "0.1.1",
+    "version": "0.1.2",
     "name": "soldotno/sol-post-formats",
     "description": "WordPress plugin to distinguide betwwen different article types - for example to format some posts as listicles.",
     "license": "GPL2+"
