@@ -19,7 +19,7 @@ class SOL_Post_Formats {
 	// The post type the metabox appears on
 	static $post_type= 'post';
 
-	public function load(){
+	public static function load(){
 		// Register taxonomy
 		add_action( 'init' , array( __CLASS__ , 'register_taxonomy' ) );
 
@@ -158,7 +158,7 @@ class SOL_Post_Formats {
 		exit();
 	}
 
-	function register_taxonomy() {
+	static function register_taxonomy() {
 		// create a new taxonomy
 		register_taxonomy(
 			static::$taxonomy,
